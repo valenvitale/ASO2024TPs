@@ -1,6 +1,4 @@
 import time
-import threading 
-
 rango = 10000000
 def tarea_1():
     print("Empezando tarea 1")
@@ -21,17 +19,9 @@ def tarea_3():
     print("Terminando tarea 3")
 
 momento_arranque = time.perf_counter()
-thr1 = threading.Thread(target=tarea_1)
-thr2 = threading.Thread(target=tarea_2)
-thr3 = threading.Thread(target=tarea_3)
-thr1.start()
-thr2.start()
-thr3.start()
-
-thr1.join()
-thr2.join()
-thr3.join()
-
+tarea_1()
+tarea_2()
+tarea_3()
 momento_parada = time.perf_counter()
 
 print(f"Tiempo transcurrido: {momento_parada - momento_arranque:0.5f} segundos")
