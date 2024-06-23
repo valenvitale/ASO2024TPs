@@ -1,5 +1,5 @@
 #!/bin/bash
-# Piedra, Papel o Tijeras: crea un script para jugar a "Piedraz, Papel o Tijeras" contra la computadora.
+# Piedra, Papel o Tijeras: crea un script para jugar a "Piedra, Papel o Tijeras" contra la computadora.
 # El script debe solicitar la eleccion del usuario, generar una eleccion aleatoria para la computadora
 # y determinar el ganador.
 
@@ -7,6 +7,7 @@ echo "Piedra, Papel o Tijeras"
 echo "1. Piedra"
 echo "2. Papel"
 echo "3. Tijeras"
+echo "4. Salir"
 
 while true; do
     echo "Elija opcion 1, 2 o 3"
@@ -40,6 +41,9 @@ while true; do
             echo "GANASTE!!"
         fi
         echo "La computadora eligio" $computadora
+     elif [ "$opcion" -eq "4" ]; then
+        echo "Saliendo del juego."
+        exit 0
     
     else
         echo "Opción no válida. Por favor, elija entre 1, 2 o 3."
